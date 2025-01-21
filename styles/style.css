@@ -13,6 +13,8 @@ body {
 
 .home-content {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Section SideBar */
@@ -21,6 +23,8 @@ body {
   height: 100%;
   background-color: #918365 !important;
   color: #ffffff !important;
+  position: fixed;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .nav-link.link-body-emphasis {
@@ -42,7 +46,15 @@ body {
 }
 
 .login-button {
+  background-color: none !important;
+  border: 1px solid #cc9552 !important;
+  color: #cc9552 !important;
+}
+
+.login-button:hover {
   background-color: #cc9552 !important;
+  border: 1px solid #cc9552 !important;
+  color: #FFFFFF !important;
 }
 
 /* Section avec les images et ... */
@@ -50,10 +62,75 @@ body {
 .autres {
     height: 100%;
     width: 100%;
+    margin-left: 250px !important;
+    margin-right: 0 !important;
 }
+
+/* Menu hamburger */
+
 
 /* La barre de recherche */
 
 .search-input {
     align-self: center !important;
 }
+
+/* Présentation de l'hôtel */
+
+#presentation {
+  color: #cc9552 !important;
+  opacity: 0.8;
+}
+
+/* Les chambres */
+
+.titre-chambre {
+  color: #cc9552 !important;
+}
+
+.btn-consulter {
+  color: #FFFFFF !important;
+  background-color: #cc9552 !important;
+}
+
+.btn-consulter:hover {
+  background-color: #918365 !important;
+}
+
+
+
+/* Partie responsive */
+@media (max-width: 768px) {
+  .sideBar {
+    position: absolute;
+    z-index: 1050; /* Pour apparaître au-dessus du contenu */
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sideBar.collapsing {
+    transform: translateX(-100%);
+  }
+
+  .sideBar.collapse:not(.show) {
+    transform: translateX(-100%);
+  }
+
+  #sidebar {
+    display: none !important;
+  }
+
+  .autres {
+    margin-left: 0 !important;
+  }
+
+  .hotel-image {
+    height: 300px;
+  }
+  
+}
+
+
+
