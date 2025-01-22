@@ -4,7 +4,7 @@ const receptionniste = [
         chambre: "Chambre 101",
         dateDebut: "2025-01-21",
         dateFin: "2025-01-23",
-        status: "Confirmée"
+        status: true
     },
     {
         id: 2,
@@ -12,7 +12,7 @@ const receptionniste = [
         chambre: "Chambre 102",
         dateDebut: "2025-01-22",
         dateFin: "2025-01-24",
-        status: "Non confirmée"
+        status: false
     },
     { 
         id: 3,
@@ -20,7 +20,7 @@ const receptionniste = [
         chambre: "Chambre 103",
         dateDebut: "2025-01-23",
         dateFin: "2025-01-25",
-        status: "Confirmée"
+        status: true
     },
     { 
         id: 4,
@@ -28,7 +28,7 @@ const receptionniste = [
         chambre: "Chambre 104",
         dateDebut: "2025-01-24",
         dateFin: "2025-01-26",
-        status: "Non confirmée"
+        status: false
     },
     {
         id: 5,
@@ -36,7 +36,7 @@ const receptionniste = [
         chambre: "Chambre 105",
         dateDebut: "2025-01-25",
         dateFin: "2025-01-27",
-        status: "Confirmée" }
+        status: true }
 ];
 
 const tableBody = document.getElementById('reservationTable');
