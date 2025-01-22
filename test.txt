@@ -300,34 +300,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col">
-			<div class="card">
-				<img
-					src="images/chambres/photo-chambre.jpg"
-					class="card-img-top"
-					alt="photo de chambre"
-					width="390"
-					loading="lazy" />
-				<div class="card-body">
-					<h5 class="card-title titre-chambre">Chambre Twin</h5>
-					<div
-						class="d-flex justify-content-between align-items-center flex-wrap">
-						<h6 class="card-text fw-bold">145.000 FCFA</h6>
-						<p class="card-text mb-2">Disponible : oui</p>
-					</div>
-					<hr />
-					<div
-						class="d-flex flex-row justify-content-between align-items-center">
-						<div>
-							
-						</div>
-						<button class="align-self-end btn btn-consulter mb-2">
-							Consulter
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
+	
 		<div class="col">
 			<div
 				class="card d-flex justify-content-center align-items-center"
