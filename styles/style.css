@@ -1,13 +1,52 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-body {
-  height: 100dvh;
-}
 
 /* Contenue de la page d'accueil */
 
@@ -17,53 +56,13 @@ body {
   padding: 0;
 }
 
-/* Section SideBar */
 
-#sidebar {
-  height: 100%;
-  background-color: #918365 !important;
-  color: #ffffff !important;
-  position: fixed;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
-
-.nav-link.link-body-emphasis {
-  color: #ffffff !important;
-  margin-bottom: 15px;
-}
-
-.nav-link.link-body-emphasis:hover {
-  background-color: #fff;
-  color: #cc9552 !important;
-  font-weight: bold;
-}
-
-.nav-link.active {
-  background-color: #ffffff !important;
-  color: #cc9552 !important;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.login-button {
-  background-color: none !important;
-  border: 1px solid #cc9552 !important;
-  color: #cc9552 !important;
-}
-
-.login-button:hover {
-  background-color: #cc9552 !important;
-  border: 1px solid #cc9552 !important;
-  color: #FFFFFF !important;
-}
 
 /* Section avec les images et ... */
 
 .autres {
     height: 100%;
     width: 100%;
-    margin-left: 250px !important;
-    margin-right: 0 !important;
 }
 
 /* Menu hamburger */
@@ -99,11 +98,52 @@ body {
 
 
 
-/* Partie responsive */
-@media (max-width: 768px) {
+
+
+
+/* Menu hamburger (caché par défaut) */
+.menu {
+  display: none;
+  position: absolute;
+  top: 40px; /* Ajustez selon la position de votre hamburger */
+  left: 10px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+/* Partie responsive 
+@media all and  (min-width: 768px) and (max-width: 1920px) {
   .sideBar {
     position: absolute;
-    z-index: 1050; /* Pour apparaître au-dessus du contenu */
+    z-index: 1050; 
     top: 0;
     left: 0;
     height: 100%;
@@ -132,5 +172,5 @@ body {
   
 }
 
-
+*/
 
