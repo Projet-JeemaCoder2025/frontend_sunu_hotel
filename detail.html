@@ -1,15 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation de Chambre</title>
-    <link rel="stylesheet" href="styles/reservation.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/sidebar.css">
-
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
     <!-- Lien favicon -->
     <link
       rel="icon"
@@ -46,6 +40,7 @@
 
     <!-- Notre fichier JavaScript -->
      <script src="/js/script.js" defer></script>
+    <title>SUNU HÔTEL</title>
   </head>
   <body>
     <div class="home-content d-flex">
@@ -114,12 +109,12 @@
                             </a>
                           </li>
                           <li>
-                            <a href="reservation.html" class="nav-link active" aria-current="page">
+                            <a href="reservation.html" class="nav-link link-body-emphasis">
                               <i class="bi bi-calendar-check me-2"></i> Réservations
                             </a>
                           </li>
                           <li>
-                            <a href="chambres.html" class="nav-link link-body-emphasis">
+                            <a href="chambres.html" class="nav-link active" aria-current="page">
                               <i class="bi bi-door-closed me-2"></i> Chambres
                             </a>
                           </li>
@@ -167,12 +162,12 @@
                     </a>
                   </li>
                   <li>
-                    <a href="reservation.html" class="nav-link active" aria-current="page">
+                    <a href="reservation.html" class="nav-link link-body-emphasis">
                       <i class="bi bi-calendar-check me-2"></i> Réservations
                     </a>
                   </li>
                   <li>
-                    <a href="chambres.html" class="nav-link link-body-emphasis">
+                    <a href="chambres.html" class="nav-link active" aria-current="page">
                       <i class="bi bi-door-closed me-2"></i> Chambres
                     </a>
                   </li>
@@ -199,18 +194,39 @@
                 </ul>
               </div>
             </div>
-            <button id="confirmPayment" class="btn-step" onclick="confirmPayment()">Confirmer le Paiement</button>
         </div>
+        <!-- Présentation de l'hôtel -->
+         <div class="flex flex-column autres" style="margin-top: 80px; height: fit-content;">
+            
+            <!-- Détails de la chambre -->
+            <div class="container d-flex flex-column">
+                <!-- Block 1 -->
+                <div>
+                    <div class="container">
+                        <div class="row">
+                        <!-- Bloc 1 avec 1 image -->
+                        <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+                        <img src="/images/chambres/bedroom-1.jpg" class="img-fluid rounded-4" alt="Image 1" style="height: 100%; width: auto;">
+                        </div>
+                        <!-- Bloc 2 avec 2 images -->
+                        <div class="col-12 col-lg-6">
+                        <div class="d-flex flex-column gap-3">
+                        <img src="/images/chambres/photo-chambre.jpg" class="img-fluid rounded-4" alt="Image 2">
+                        <img src="/images/chambres/photo-chambre.jpg" class="img-fluid rounded-4" alt="Image 3">
+                        </div>
+                        </div>
+                        </div></div>
+                </div>
 
-
-        <!-- Partie réservation -->
-         <div class="autres px-3" style="margin-top: 70px; height: fit-content;">
-            <h3>Connectez-vous pour consulter ou faire des réservations.</h3>
+                <!-- Block 2 -->
+                <div>
+                    <div class="d-flex">
+                        <h1>Merci</h1>
+                    </div>
+                </div>
+            </div>
          </div>
         
     </div>
-
-    <script src="js/reservation.js"></script>
-</body>
-
+  </body>
 </html>
