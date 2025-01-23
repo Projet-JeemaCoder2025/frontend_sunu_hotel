@@ -1,25 +1,25 @@
-const tableau = [
-    "navbar/etatcivil.html",
-    "navbar/formations.html",
-    "navbar/experiences.html",
-    "navbar/centredinteret.html",
-    "navbar/contacts.html",
-    "navbar/album.html",
-  ];
-  
-  $(document).ready(function () {
-    // Ajouter l'événement click à tous les éléments <li>
-    $("nav-link").click(function () {
-      // Retirer la classe active de tous les autres éléments
-      $("nav-link").removeClass("active");
-  
-      // Ajouter la classe active à l'élément cliqué
-      $(this).addClass("active");
-  
-      // Obtenir l'index de l'élément cliqué
-      const index = $(this).index();
-  
-    });
-  });
-  
-  
+// Sélectionne le bouton hamburger
+const hamburger = document.querySelector(".hamburger");
+
+// Crée dynamiquement le menu
+const menu = document.createElement("div");
+menu.classList.add("menu");
+menu.innerHTML = `
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="chambres.html">Chambres</a></li>
+    <li><a href="reservation.html">Réservations</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="connexion.html">Connexion</a></li>
+    <li><a href="inscription.html">Inscription</a></li>
+  </ul>
+`;
+
+// Ajoute le menu au document
+document.body.appendChild(menu);
+
+// Gère l'affichage du menu
+hamburger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
