@@ -13,18 +13,28 @@ body {
 
 .home-content {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Section SideBar */
+
+.offcanvas-body {
+  background-color: #918365 !important;
+  color: #ffffff !important;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
 
 #sidebar {
   height: 100%;
   background-color: #918365 !important;
   color: #ffffff !important;
   position: fixed;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.offcanvas.show:not(.hiding), .offcanvas.showing {
+  width: 250px !important;
 }
 
 .nav-link.link-body-emphasis {
@@ -66,8 +76,6 @@ body {
     margin-right: 0 !important;
 }
 
-/* Menu hamburger */
-
 
 /* La barre de recherche */
 
@@ -101,36 +109,62 @@ body {
 
 /* Partie responsive */
 @media (max-width: 768px) {
-  .sideBar {
-    position: absolute;
-    z-index: 1050; /* Pour apparaître au-dessus du contenu */
-    top: 0;
-    left: 0;
-    height: 100%;
-    transition: transform 0.3s ease-in-out;
-  }
 
-  .sideBar.collapsing {
-    transform: translateX(-100%);
-  }
-
-  .sideBar.collapse:not(.show) {
-    transform: translateX(-100%);
-  }
-
-  #sidebar {
-    display: none !important;
-  }
-
+  /* Styles pour une largeur inférieur à 768px */
   .autres {
     margin-left: 0 !important;
   }
-
-  .hotel-image {
-    height: 300px;
+}
+@media (min-width: 767px) and (max-width: 768px) {
+  /* Styles pour une largeur exacte de 768px */
+  .autres {
+    margin-left: 0 !important;
   }
-  
+}
+@media (min-width:768px) {
+  .autres {
+    margin-left: 250px !important;
+  }
+}
+
+
+.logout-button {
+  background-color: #de8d2a !important;
+  border: 1px solid #cc9552 !important;
+  color: #FFFFFF !important;
+}
+
+.logout-button:hover {
+  background-color: #cc9552 !important;
+  border: 1px solid #de8d2a !important;
 }
 
 
 
+/* PAGE D'ACCUEIL CLIENT */
+
+.accueil-client {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Table de réservations, Offres et promotions et notification */
+.table-reservation, .promotions, .notification {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+}
+
+.table-reservation {
+  flex-shrink: 0;
+  overflow: scroll;
+}
+
+.scroller {
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+/* Couleur tableau */
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  background-color: #cc9552;
+}
