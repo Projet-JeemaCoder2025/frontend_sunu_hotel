@@ -66,18 +66,19 @@
                     >
                       <span class="navbar-toggler-icon"></span>
                     </button>
-                    <form class="search-input d-none d-md-block">
+                    <form id="search-form" class="search-input d-none d-md-block">
                       <div class="input-group flex-nowrap">
                         <input
                           type="text"
+                          id="search-query" 
                           class="form-control"
                           placeholder="Rechercher"
                         />
-                        <span class="input-group-text"
-                          ><i class="bi bi-search"></i
-                        ></span>
+                        <span class="input-group-text" id="search-button">
+                          <i class="bi bi-search"></i>
+                        </span>
                       </div>
-                    </form>
+                    </form>  
                     <div class="d-flex flex-row align-self-end ms-3">
                       <button class="btn me-3 login-button fw-bold">
                         Insciption
@@ -128,16 +129,19 @@
                               <i class="bi bi-envelope me-2"></i> Contact
                             </a>
                           </li>
-                          <form class="search-input d-block d-md-none">
-                              <div class="input-group flex-nowrap">
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  placeholder="Rechercher"
-                                />
-                                <span class="input-group-text"><i class="bi bi-search"></i></span>
-                              </div>
-                            </form>
+                          <form id="search-form" class="search-input d-none d-md-block">
+                            <div class="input-group flex-nowrap">
+                              <input
+                                type="text"
+                                id="search-query" 
+                                class="form-control"
+                                placeholder="Rechercher"
+                              />
+                              <span class="input-group-text" id="search-button">
+                                <i class="bi bi-search"></i>
+                              </span>
+                            </div>
+                          </form>  
                         </ul>
                   </div>
                 </div>
@@ -181,16 +185,19 @@
                       <i class="bi bi-envelope me-2"></i> Contact
                     </a>
                   </li>
-                  <form class="search-input d-block d-md-none">
-                      <div class="input-group flex-nowrap">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Rechercher"
-                        />
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
-                      </div>
-                    </form>
+                  <form id="search-form" class="search-input d-none d-md-block">
+                    <div class="input-group flex-nowrap">
+                      <input
+                        type="text"
+                        id="search-query" 
+                        class="form-control"
+                        placeholder="Rechercher"
+                      />
+                      <span class="input-group-text" id="search-button">
+                        <i class="bi bi-search"></i>
+                      </span>
+                    </div>
+                  </form>  
                 </ul>
               </div>
             </div>
@@ -383,3 +390,4 @@
          </div>
         
     </div>
+    <script src="js/rechercher.js"></script>

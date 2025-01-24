@@ -68,16 +68,19 @@ crossorigin="anonymous"
             <i class="bi bi-envelope me-2"></i> Contact
           </a>
         </li>
-        <form class="search-input d-block d-md-none">
-            <div class="input-group flex-nowrap">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Rechercher"
-              />
-              <span class="input-group-text"><i class="bi bi-search"></i></span>
-            </div>
-          </form>
+        <form id="search-form" class="search-input d-none d-md-block">
+          <div class="input-group flex-nowrap">
+            <input
+              type="text"
+              id="search-query" 
+              class="form-control"
+              placeholder="Rechercher"
+            />
+            <span class="input-group-text" id="search-button">
+              <i class="bi bi-search"></i>
+            </span>
+          </div>
+        </form>  
       </ul>
     </div>
   </div>

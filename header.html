@@ -33,16 +33,19 @@
 <svg class="d-md-none" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
   </svg>
-  <form class="search-input d-none d-md-block">
+  <form id="search-form" class="search-input d-none d-md-block">
     <div class="input-group flex-nowrap">
       <input
         type="text"
+        id="search-query" 
         class="form-control"
         placeholder="Rechercher"
       />
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <span class="input-group-text" id="search-button">
+        <i class="bi bi-search"></i>
+      </span>
     </div>
-  </form>
+  </form>  
   <div class="d-flex ms-3">
     <button class="btn me-3 login-button fw-bold">Insciption</button>
     <button class="btn login-button fw-bold">Connexion</button>
