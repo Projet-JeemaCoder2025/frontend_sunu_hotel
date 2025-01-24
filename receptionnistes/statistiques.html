@@ -66,18 +66,19 @@
                 >
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <form class="search-input d-none d-md-block">
+                <form id="search-form" class="search-input d-none d-md-block">
                   <div class="input-group flex-nowrap">
                     <input
                       type="text"
+                      id="search-query" 
                       class="form-control"
                       placeholder="Rechercher"
                     />
-                    <span class="input-group-text"
-                      ><i class="bi bi-search"></i
-                    ></span>
+                    <span class="input-group-text" id="search-button">
+                      <i class="bi bi-search"></i>
+                    </span>
                   </div>
-                </form>
+                </form>  
                 <div class="d-flex flex-row align-self-end ms-3">
                    <!-- Icone User -->
                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -147,18 +148,19 @@
                     </a>
                   </li>
                   
-                  <form class="search-input d-block d-md-none">
+                  <form id="search-form" class="search-input d-none d-md-block">
                     <div class="input-group flex-nowrap">
                       <input
                         type="text"
+                        id="search-query" 
                         class="form-control"
                         placeholder="Rechercher"
                       />
-                      <span class="input-group-text"
-                        ><i class="bi bi-search"></i
-                      ></span>
+                      <span class="input-group-text" id="search-button">
+                        <i class="bi bi-search"></i>
+                      </span>
                     </div>
-                  </form>
+                  </form>  
                 </ul>
                 <a href="deconnexion.html" class="btn logout-button fw-bold">Déconnexion</a>
               </div>
@@ -215,18 +217,19 @@
                   <i class="bi bi-people me-2 me-2"></i> Gestion des clients
                 </a>
               </li>
-              <form class="search-input d-block d-md-none">
+              <form id="search-form" class="search-input d-none d-md-block">
                 <div class="input-group flex-nowrap">
                   <input
                     type="text"
+                    id="search-query" 
                     class="form-control"
                     placeholder="Rechercher"
                   />
-                  <span class="input-group-text"
-                    ><i class="bi bi-search"></i
-                  ></span>
+                  <span class="input-group-text" id="search-button">
+                    <i class="bi bi-search"></i>
+                  </span>
                 </div>
-              </form>
+              </form>  
             </ul>
             <a href="deconnexion.html" class="btn logout-button fw-bold">Déconnexion</a>
           </div>
@@ -245,5 +248,6 @@
           
       </div>
     </div>
+    <script src="js/rechercher.js"></script>
   </body>
 </html>
