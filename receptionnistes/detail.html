@@ -38,6 +38,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Lien Font-Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Notre fichier JavaScript -->
     <script src="../js/script.js" defer></script>
     <title>SUNU HÔTEL</title>
@@ -79,21 +85,11 @@
                   </div>
                 </form>
                 <div class="d-flex flex-row align-self-end ms-3">
-                  <!-- Icone User -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-person-circle"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                    <path
-                      fill-rule="evenodd"
-                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-                    />
-                  </svg>
+                     <!-- Icone User -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
                 </div>
               </div>
             </div>
@@ -106,7 +102,7 @@
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"
             >
-              <div class="offcanvas-body">
+              <div class="offcanvas-body d-flex flex-column">
                 <a
                   href="/"
                   class="d-flex justify-content-center align-items-center mb-5"
@@ -141,19 +137,13 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="statistiques.html"
-                      class="nav-link link-body-emphasis"
-                    >
-                      <i class="bi bi-bar-chart me-2"></i>Statistiques
+                    <a href="apropos.html" class="nav-link link-body-emphasis">
+                      <i class="bi bi-info-circle me-2"></i> A propos
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="gestion_clients.html"
-                      class="nav-link link-body-emphasis"
-                    >
-                      <i class="bi bi-people me-2 me-2"></i> Gestion des clients
+                    <a href="contact.html" class="nav-link link-body-emphasis">
+                      <i class="bi bi-envelope me-2"></i> Contact
                     </a>
                   </li>
                   <li>
@@ -177,6 +167,7 @@
                     </div>
                   </form>
                 </ul>
+                <a href="../connexion.html" class="btn logout-button fw-bold">Déconnexion</a>
               </div>
             </div>
           </div>
@@ -191,11 +182,7 @@
               href="/"
               class="d-flex justify-content-center align-items-center mb-5"
             >
-              <img
-                src="../images/logo-2.png"
-                alt="Logo SUNU HOTEL"
-                width="100"
-              />
+              <img src="../images/logo-2.png" alt="Logo SUNU HOTEL" width="100" />
             </a>
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
@@ -251,149 +238,110 @@
                 </div>
               </form>
             </ul>
-            <a href="../deconnexion.html" class="btn logout-button fw-bold"
-              >Déconnexion</a
-            >
+            <a href="../connexion.html" class="btn logout-button fw-bold">Déconnexion</a>
           </div>
         </div>
       </div>
-      <!-- Partie du Formulaire -->
+      <!-- Présentation de l'hôtel -->
       <div
         class="flex flex-column autres"
         style="margin-top: 80px; height: fit-content"
       >
-        <h2 class="text-center mb-3">Ajouter une chambre</h2>
-        <div class="container mb-3 px-5">
-          <form id="chambreForm" method="POST" action="">
-            <!-- Nom et Catégorie -->
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="nom" class="form-label">Nom de la chambre</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nom"
-                  name="nom"
-                  placeholder="Entrez le nom de la chambre"
-                  required
+        <!-- Détails de la chambre -->
+        <div class="container">
+          <h2 class="text-center mb-3">Chambre avec lit simple</h2>
+          <!-- Block 1 -->
+          <div class="row d-flex flex-md-row flex-column g-3">
+            <!-- Bloc 1 avec 1 image -->
+            <div class="col-12 col-md-8 col-lg-8">
+              <img
+                src="/images/chambres/bedroom-1.jpg"
+                id="images-detail"
+                class="img-fluid rounded-4 img-limited w-100"
+                alt="Image 1"
+              />
+            </div>
+            <!-- Bloc 2 avec 2 images -->
+            <div class="col-6 col-md-4 col-lg-4">
+              <div class="d-flex flex-row flex-md-column gap-3">
+                <img
+                  src="/images/chambres/photo-chambre.jpg"
+                  id="images-detail"
+                  class="img-fluid rounded-4 img-limited"
+                  alt="Image 2"
                 />
-                <div class="invalid-feedback">
-                  Le nom de la chambre est requis.
+                <img
+                  src="/images/chambres/photo-chambre.jpg"
+                  id="images-detail"
+                  class="img-fluid rounded-4 img-limited"
+                  alt="Image 3"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Block 2 -->
+          <div>
+            <div class="row m-2 g-3">
+              <!-- Partie description de la chambre -->
+              <div>
+                <h4>A propos de la chambre</h4>
+                <p>
+                  Découvrez notre chambre équipée d'un lit simple, idéale pour
+                  les voyageurs en solo ou les courts séjours. Cette chambre
+                  combine confort et praticité, offrant un espace chaleureux et
+                  bien aménagé. Profitez d'un lit simple avec un matelas de
+                  haute qualité pour un sommeil réparateur, accompagné de linge
+                  de lit doux et propre.
+                </p>
+                <div
+                  class="d-flex gap-3 align-items-center justify-content-center mb-5"
+                >
+                  <div class="d-flex gap-3 flex-column flex-sm-row">
+                    <div class="text-center">
+                      <i
+                        class="fas fa-bath"
+                        style="font-size: 40px; color: #cc9552"
+                      ></i>
+                      <p>Salle de bain</p>
+                    </div>
+                    <div class="text-center">
+                      <i
+                        class="fas fa-wifi"
+                        style="font-size: 40px; color: #cc9552"
+                      ></i>
+                      <p>Wi-Fi</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex gap-3 flex-column flex-sm-row">
+                    <div class="text-center">
+                      <i
+                        class="fas fa-tv"
+                        style="font-size: 40px; color: #cc9552"
+                      ></i>
+                      <p>Télévision</p>
+                    </div>
+                    <div class="text-center">
+                      <i
+                        class="fas fa-utensils"
+                        style="font-size: 40px; color: #cc9552"
+                      ></i>
+                      <p>Table à manger</p>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mb-5">Montant : <span style="color: #cc9552;">50.000 FCFA / nuit</span> pour une personne</h3>
+                <div class="d-flex justify-content-between justify-content-lg-around mb-3">
+
+                    <a href="modifier_chambre.html" class="btn btn-warning">Modifier les informations</a>
+                    <a href="chambres.html" class="btn btn-danger">Supprimer la chambre</a>
                 </div>
               </div>
-              <div class="col-md-6">
-                <label for="categorie" class="form-label">Catégorie</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="categorie"
-                  name="categorie"
-                  placeholder="Entrez la catégorie de la chambre"
-                  required
-                />
-                <div class="invalid-feedback">La catégorie est requise.</div>
-              </div>
             </div>
-
-            <!-- Prix et Disponibilité -->
-            <div class="row g-3 mt-2">
-              <div class="col-md-6">
-                <label for="prix" class="form-label">Prix</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="prix"
-                  name="prix"
-                  placeholder="Mettez le prix de la chambre"
-                  required
-                />
-                <div class="invalid-feedback">Le prix est requis.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="disponibilite" class="form-label"
-                  >Disponibilité</label
-                >
-                <select
-                  class="form-control"
-                  id="disponibilite"
-                  name="disponibilite"
-                  required
-                >
-                  <option value="">-- Sélectionnez --</option>
-                  <option value="oui">Oui</option>
-                  <option value="non">Non</option>
-                </select>
-                <div class="invalid-feedback">
-                  Veuillez indiquer si la chambre est disponible.
-                </div>
-              </div>
-            </div>
-
-            <!-- Capacité de la chambre -->
-            <div class="mb-3 mt-3">
-              <label for="capacite" class="form-label"
-                >Capacité de la chambre</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="capacite"
-                name="capacite"
-                placeholder="Mettez le nombre de personnes que prend la chambre"
-                required
-              />
-              <div class="invalid-feedback">La capacité est requise.</div>
-            </div>
-
-            <!-- Les images -->
-            <div class="mb-3 mt-3">
-              <label for="formFileMultiple" class="form-label"
-                >Ajouter une ou des images de la chambre</label
-              >
-              <input
-                class="form-control"
-                type="file"
-                id="formFileMultiple"
-                multiple
-                required
-              />
-              <div class="invalid-feedback">
-                Veuillez ajouter une ou plusieurs images.
-              </div>
-            </div>
-
-            <!-- Description -->
-            <div class="mb-3">
-              <label for="description" class="form-label"
-                >Description de la chambre</label
-              >
-              <textarea
-                class="form-control"
-                id="description"
-                name="description"
-                rows="5"
-                placeholder="Écrivez la description de la chambre"
-                required
-              ></textarea>
-              <div class="invalid-feedback">La description est requise.</div>
-            </div>
-
-            <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between justify-content-lg-around my-2">
-
-              <!-- Bouton d'annulation -->
-              <a href="chambres.html" class="btn btn-warning mb-3">Revenir en arrière</a>
-              <!-- Bouton d'envoi -->
-              <button type="submit" class="btn btn-success mb-3">
-                  Ajouter la chambre
-                </button>
-            </div>
-          </form>
-
-          
+          </div>
         </div>
       </div>
     </div>
-
-    <script src="../js/validation_ajout_chambres.js"></script>
   </body>
 </html>

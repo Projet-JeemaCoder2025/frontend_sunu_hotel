@@ -9,7 +9,6 @@ body {
   height: 100dvh;
 }
 
-
 /* Contenue de la page d'accueil */
 
 .home-content {
@@ -168,4 +167,10 @@ body {
 /* Couleur tableau */
 .table-striped>tbody>tr:nth-of-type(odd)>* {
   background-color: #cc9552;
+}
+
+
+#images-detail {
+  height: 100%;
+  width: auto;
 }
