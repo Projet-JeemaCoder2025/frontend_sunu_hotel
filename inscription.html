@@ -1,56 +1,71 @@
-
-    <div class="formulaire d-flex justify-content-center align-items-center">
-        <div class="form-container">
-            <h2 class="mb-5">INSCRIPTION</h2>
-            <form action="" method="post">
-              <div class="mb-3">
-                <input
+<div class="formulaire d-flex justify-content-center align-items-center">
+  <div class="form-container">
+      <h2 class="mb-5">INSCRIPTION</h2>
+      <form action="" method="post" novalidate>
+          <div class="mb-3">
+              <p id="first_name_error" class="error-message"></p>
+              <input
+                  id="first_name"
                   type="text"
                   class="form-control"
                   placeholder="Prénom"
                   required
                   name="first_name"
-                />
-              </div>
-              <div class="mb-3">
-                <input
+              />
+          </div>
+          <div class="mb-3">
+              <p id="last_name_error" class="error-message"></p>
+              <input
+                  id="last_name"
                   type="text"
                   class="form-control"
                   placeholder="Nom"
                   required
                   name="last_name"
-                />
-              </div>
-              <div class="mb-3">
-                <input
+              />
+          </div>
+          <div class="mb-3">
+              <p id="email_error" class="error-message"></p>
+              <input
+                  id="email"
                   type="email"
                   class="form-control"
                   placeholder="Email"
                   required
                   name="email"
-                />
-              </div>
-              <div class="mb-3">
-                <input
+              />
+          </div>
+          <div class="mb-3">
+              <p id="phone_number_error" class="error-message"></p>
+              <input
+                  id="phone_number"
                   type="text"
                   class="form-control"
                   placeholder="Téléphone"
                   required
                   name="phone_number"
-                />
-              </div>
-              <div class="mb-3">
-                <input
+              />
+          </div>
+          <div class="mb-3">
+              <p id="password_error" class="error-message"></p>
+              <input
+                  id="password"
                   type="password"
                   class="form-control"
                   placeholder="Mot de passe"
                   required
                   name="password"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary w-100 mt-3">S'inscrire</button>
-            </form>
-            <a href="connexion.html">Aller à la page de connexion</a>
+              />
           </div>
-    </div>
+          <button type="submit" class="btn btn-primary w-100 mt-3">S'inscrire</button>
+      </form>
+      <a href="connexion.html">Aller à la page de connexion</a>
+  </div>
+</div>
 
+<div id="popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; border:1px solid #888; z-index:1000;">
+  <span id="popupMessage"></span>
+  <button onclick="document.getElementById('popup').style.display='none';">Fermer</button>
+</div>
+
+<script src="./js/inscription.js"></script>
