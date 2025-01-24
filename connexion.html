@@ -20,7 +20,7 @@
       href="/images/apple-touch-icon.png"
     />
     <link rel="manifest" href="/images/site.webmanifest" />
-    <link rel="stylesheet" href="styles/inscription-connexion.css">
+    <link rel="stylesheet" href="styles/inscription_connexion.css">
     <!-- Lien pour Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -41,16 +41,15 @@
     ></script>
 
     <!-- Notre fichier JavaScript -->
-     <script src="/js/script.js" defer></script>
   </head>
   <body>
         <div class="formulaire d-flex justify-content-center align-items-center">
             <div class="form-container">
                 <h2 class="mb-5">CONNEXION</h2>
-                <form action="" method="post">
+                <form action="" method="post" id="form-connexion" novalidate>
                 
                 <div class="mb-3">
-                    <input
+                    <input id="my-email"
                     type="email"
                     class="form-control"
                     placeholder="Email"
@@ -60,8 +59,9 @@
                 </div>
                 <div class="mb-3">
                     <input
+                    id="my-password"
                     type="password"
-                    class="form-control"
+                    class="form-control my-password"
                     placeholder="Mot de passe"
                     required
                     name="password"
@@ -69,9 +69,12 @@
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Se connecter</button>
                 </form>
+                <p></p>
                 <div class="d-flex justify-content-between flex-wrap">
                     <a href="inscription.html">Créer un compte</a>
                     <a href="">Mot de passe oublié ?</a>
                 </div>
             </div>
         </div>
+
+        <script src="./js/connexion.js"></script>
