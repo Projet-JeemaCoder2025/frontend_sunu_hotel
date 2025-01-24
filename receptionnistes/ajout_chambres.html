@@ -240,6 +240,100 @@
         
         <h2 class="text-center mb-3">Ajouter une chambre</h2>
         <div class="container mb-3 px-5">
+          
+          <form id="chambreForm" method="POST">
+            <!-- Nom et Catégorie -->
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="nom" class="form-label">Nom de la chambre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nom"
+                  name="nom"
+                  placeholder="Entrez le nom de la chambre"
+                  required
+                />
+                <div class="invalid-feedback">Le nom de la chambre est requis.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="categorie" class="form-label">Catégorie</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="categorie"
+                  name="categorie"
+                  placeholder="Entrez la catégorie de la chambre"
+                  required
+                />
+                <div class="invalid-feedback">La catégorie est requise.</div>
+              </div>
+            </div>
+          
+            <!-- Prix et Disponibilité -->
+            <div class="row g-3 mt-2">
+              <div class="col-md-6">
+                <label for="prix" class="form-label">Prix</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="prix"
+                  name="prix"
+                  placeholder="Mettez le prix de la chambre"
+                  required
+                />
+                <div class="invalid-feedback">Le prix est requis.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="disponibilite" class="form-label">Disponibilité</label>
+                <select class="form-control" id="disponibilite" name="disponibilite" required>
+                  <option value="">-- Sélectionnez --</option>
+                  <option value="oui">Oui</option>
+                  <option value="non">Non</option>
+                </select>
+                <div class="invalid-feedback">Veuillez indiquer si la chambre est disponible.</div>
+              </div>
+            </div>
+          
+            <!-- Capacité de la chambre -->
+            <div class="mb-3 mt-3">
+              <label for="capacite" class="form-label">Capacité de la chambre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="capacite"
+                name="capacite"
+                placeholder="Mettez le nombre de personnes que prend la chambre"
+                required
+              />
+              <div class="invalid-feedback">La capacité est requise.</div>
+            </div>
+          
+            <!-- Les images -->
+            <div class="mb-3 mt-3">
+              <label for="formFileMultiple" class="form-label">Ajouter une ou des images de la chambre</label>
+              <input class="form-control" type="file" id="formFileMultiple" multiple required />
+              <div class="invalid-feedback">Veuillez ajouter une ou plusieurs images.</div>
+            </div>
+          
+            <!-- Description -->
+            <div class="mb-3">
+              <label for="description" class="form-label">Description de la chambre</label>
+              <textarea
+                class="form-control"
+                id="description"
+                name="description"
+                rows="5"
+                placeholder="Écrivez la description de la chambre"
+                required
+              ></textarea>
+              <div class="invalid-feedback">La description est requise.</div>
+            </div>
+          
+            <!-- Bouton d'envoi -->
+            <button type="submit" class="btn btn-consulter w-100">Ajouter la chambre</button>
+          </form>
+          
             <form action="" method="POST">
               <!-- Nom et Catégorie -->
               <div class="row g-3">
@@ -328,9 +422,14 @@
               <!-- Bouton d'envoi -->
               <button type="submit" class="btn btn-consulter w-100">Ajouter la chambre</button>
             </form>
+
           </div>
           
       </div>
     </div>
+
+    <script src="../js/validation_ajout_chambres.js"></script>
+
+
   </body>
 </html>
