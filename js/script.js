@@ -23,3 +23,5 @@ document.body.appendChild(menu);
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
+
+

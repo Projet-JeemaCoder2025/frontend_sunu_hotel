@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SUNU HÔTEL</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="./styles/inscription_connexion.css" />
     <!-- Lien favicon -->
     <link
       rel="icon"
@@ -39,39 +39,75 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- Notre fichier JavaScript -->
-     <script src="/js/script.js" defer></script>
+    <script src="./js/api.js" defer></script>
   </head>
   <body>
-        <div class="formulaire d-flex justify-content-center align-items-center">
-            <div class="form-container">
-                <h2 class="mb-5">CONNEXION</h2>
-                <form action="" method="post">
-                
-                <div class="mb-3">
-                    <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email"
-                    required
-                    name="email"
-                    />
-                </div>
-                <div class="mb-3">
-                    <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Mot de passe"
-                    required
-                    name="password"
-                    />
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Se connecter</button>
-                </form>
-                <div class="d-flex justify-content-between flex-wrap">
-                    <a href="inscription.html">Créer un compte</a>
-                    <a href="">Mot de passe oublié ?</a>
-                </div>
-            </div>
+    <div class="formulaire d-flex justify-content-center align-items-center">
+      <div class="form-container">
+        <h2 class="mb-5">CONNEXION</h2>
+        <form id="loginform" action="" method="post" onsubmit="return validateForm()">
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              required
+              name="email"
+              id="email"
+            />
+            <small id="email-error" class="text-danger"></small>
+          </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Mot de passe"
+              required
+              name="password"
+              id="password"
+            />
+            <small id="password-error" class="text-danger"></small>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+        </form>
+        <div class="d-flex justify-content-between flex-wrap">
+          <a href="inscription.html">Créer un compte</a>
+          <a href="">Mot de passe oublié ?</a>
         </div>
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        let isValid = true;
+        
+        // Validation de l'email
+        const email = document.getElementById('email');
+        const emailError = document.getElementById('email-error');
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        if (!email.value.match(emailRegex)) {
+          emailError.textContent = "L'adresse email doit se terminer par @gmail.com.";
+          isValid = false;
+        } else {
+          emailError.textContent = '';
+        }
+
+        // Validation du mot de passe
+        const password = document.getElementById('password');
+        const passwordError = document.getElementById('password-error');
+        const passwordRegex = /^(?=.*[A-Z])(?=.*\d).+$/; // Au moins une majuscule et un chiffre
+        if (password.value.length < 8 || !password.value.match(passwordRegex)) {
+          passwordError.textContent = "Le mot de passe doit commencer par une majuscule, contenir au moins un chiffre et avoir 8 caractères minimum.";
+          isValid = false;
+        } else {
+          passwordError.textContent = '';
+        }
+
+        return isValid;
+      }
+    </script>
+  </body>
+</html>

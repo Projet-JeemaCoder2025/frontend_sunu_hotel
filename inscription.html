@@ -1,8 +1,27 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUNU HÔTEL</title>
+    <link rel="stylesheet" href="styles/inscription_connexion.css" />
+    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="manifest" href="/images/site.webmanifest" />
+    <link rel="stylesheet" href="styles/inscription-connexion.css">
+    <!-- Lien pour Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
     <div class="formulaire d-flex justify-content-center align-items-center">
         <div class="form-container">
             <h2 class="mb-5">INSCRIPTION</h2>
-            <form action="" method="post">
+            <form id="registration-form">
               <div class="mb-3">
                 <input
                   type="text"
@@ -11,6 +30,7 @@
                   required
                   name="first_name"
                 />
+                <div class="invalid-feedback" id="first_name_error"></div>
               </div>
               <div class="mb-3">
                 <input
@@ -20,6 +40,7 @@
                   required
                   name="last_name"
                 />
+                <div class="invalid-feedback" id="last_name_error"></div>
               </div>
               <div class="mb-3">
                 <input
@@ -29,6 +50,7 @@
                   required
                   name="email"
                 />
+                <div class="invalid-feedback" id="email_error"></div>
               </div>
               <div class="mb-3">
                 <input
@@ -38,6 +60,7 @@
                   required
                   name="phone_number"
                 />
+                <div class="invalid-feedback" id="phone_number_error"></div>
               </div>
               <div class="mb-3">
                 <input
@@ -47,10 +70,92 @@
                   required
                   name="password"
                 />
+                <div class="invalid-feedback" id="password_error"></div>
               </div>
-              <button type="submit" class="btn btn-primary w-100 mt-3">S'inscrire</button>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Confirmer le mot de passe"
+                  required
+                  name="password_confirmation"
+                />
+                <div class="invalid-feedback" id="password_confirmation_error"></div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 mt-3" id="submit-btn">S'inscrire</button>
             </form>
             <a href="connexion.html">Aller à la page de connexion</a>
-          </div>
+        </div>
     </div>
 
+    <script>
+      // Fonction pour gérer l'inscription via Axios
+      document.getElementById('registration-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêche le rechargement de la page lors de la soumission du formulaire
+
+        // Désactivation du bouton pour éviter les soumissions multiples
+        const submitButton = document.getElementById('submit-btn');
+        submitButton.disabled = true;
+        submitButton.innerText = 'Enregistrement...';
+
+        const formData = new FormData(this); // Récupère les données du formulaire
+
+        // Conversion des données du FormData en objet
+        const data = Object.fromEntries(formData.entries());
+
+        // Envoi des données via Axios
+        axios.post('http://127.0.0.1:8000/api/register', data)
+          .then(response => {
+            // Gestion de la réponse en cas de succès
+            alert('Inscription réussie !');
+            console.log(response.data);
+            // Rediriger vers la page de connexion ou autre action
+            window.location.href = 'connexion.html'; 
+          })
+          .catch(error => {
+            // Gestion des erreurs côté serveur
+            console.error(error);
+            const errors = error.response.data.errors;
+            // Réinitialiser les erreurs de validation
+            resetErrors();
+
+            // Afficher les erreurs spécifiques pour chaque champ
+            if (errors.first_name) {
+              document.getElementById('first_name_error').innerText = errors.first_name[0];
+              document.querySelector('[name="first_name"]').classList.add('is-invalid');
+            }
+            if (errors.last_name) {
+              document.getElementById('last_name_error').innerText = errors.last_name[0];
+              document.querySelector('[name="last_name"]').classList.add('is-invalid');
+            }
+            if (errors.email) {
+              document.getElementById('email_error').innerText = errors.email[0];
+              document.querySelector('[name="email"]').classList.add('is-invalid');
+            }
+            if (errors.phone_number) {
+              document.getElementById('phone_number_error').innerText = errors.phone_number[0];
+              document.querySelector('[name="phone_number"]').classList.add('is-invalid');
+            }
+            if (errors.password) {
+              document.getElementById('password_error').innerText = errors.password[0];
+              document.querySelector('[name="password"]').classList.add('is-invalid');
+            }
+            if (errors.password_confirmation) {
+              document.getElementById('password_confirmation_error').innerText = errors.password_confirmation[0];
+              document.querySelector('[name="password_confirmation"]').classList.add('is-invalid');
+            }
+
+            // Réactiver le bouton après la gestion de l'erreur
+            submitButton.disabled = false;
+            submitButton.innerText = "S'inscrire";
+          });
+      });
+
+      // Fonction pour réinitialiser les erreurs
+      function resetErrors() {
+        document.querySelectorAll('.is-invalid').forEach(input => input.classList.remove('is-invalid'));
+        document.querySelectorAll('.invalid-feedback').forEach(feedback => feedback.innerText = '');
+      }
+    </script>
+  </body>
+</html>
