@@ -98,8 +98,7 @@
               aria-labelledby="offcanvasNavbarLabel"
             >
               <div class="offcanvas-body d-flex flex-column">
-                <a
-                  href="/"
+                <div
                   class="d-flex justify-content-center align-items-center mb-5"
                 >
                   <img
@@ -107,25 +106,25 @@
                     alt="Logo SUNU HOTEL"
                     width="100"
                   />
-                </a>
+                </div>
                 <ul class="nav nav-pills flex-column mb-auto">
                   <li class="nav-item">
-                    <a href="accueil.html" class="nav-link link-body-emphasis">
+                    <a href="accueil.html"
+                      class="nav-link active"
+                      aria-current="page">
                       <i class="bi bi-house-door-fill me-2"></i> Accueil
                     </a>
                   </li>
                   <li>
                     <a
-                      href="reservation.html"
-                      class="nav-link active"
-                      aria-current="page"
+                      href="reservation.html" class="nav-link link-body-emphasis"
                     >
                       <i class="bi bi-calendar-check me-2"></i> Réservations
                     </a>
                   </li>
                   <li>
                     <a
-                      href="../chambres.html"
+                      href="chambres.html"
                       class="nav-link link-body-emphasis"
                     >
                       <i class="bi bi-door-closed me-2"></i> Chambres
@@ -133,7 +132,15 @@
                   </li>
                   <li>
                     <a
-                      href="../apropos.html"
+                      href="messages.html"
+                      class="nav-link link-body-emphasis"
+                    >
+                    <i class="bi bi-chat me-2"></i> Messages
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="apropos.html"
                       class="nav-link link-body-emphasis"
                     >
                       <i class="bi bi-info-circle me-2"></i> A propos
@@ -141,7 +148,7 @@
                   </li>
                   <li>
                     <a
-                      href="../contact.html"
+                      href="contact.html"
                       class="nav-link link-body-emphasis"
                     >
                       <i class="bi bi-envelope me-2"></i> Contact
@@ -160,7 +167,7 @@
                     </div>
                   </form>
                 </ul>
-                <button class="btn logout-button fw-bold">Déconnexion</button>
+                <a href="../connexion.html" class="btn logout-button fw-bold">Déconnexion</a>
               </div>
             </div>
           </div>
@@ -171,8 +178,7 @@
             class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary d-block"
             style="width: 250px"
           >
-            <a
-              href="/"
+            <div
               class="d-flex justify-content-center align-items-center mb-5"
             >
               <img
@@ -180,33 +186,41 @@
                 alt="Logo SUNU HOTEL"
                 width="100"
               />
-            </a>
+            </div>
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
-                <a href="accueil.html" class="nav-link link-body-emphasis">
+                <a href="accueil.html"
+                  class="nav-link active"
+                  aria-current="page">
                   <i class="bi bi-house-door-fill me-2"></i> Accueil
                 </a>
               </li>
               <li>
-                <a href="reservation.html"
-                  class="nav-link active"
-                  aria-current="page">
+                <a href="reservation.html" class="nav-link link-body-emphasis">
                   <i class="bi bi-calendar-check me-2"></i> Réservations
                 </a>
               </li>
               <li>
                 <a
-                  href="../chambres.html" class="nav-link link-body-emphasis">
+                  href="chambres.html" class="nav-link link-body-emphasis">
                   <i class="bi bi-door-closed me-2"></i> Chambres
                 </a>
               </li>
               <li>
-                <a href="../apropos.html" class="nav-link link-body-emphasis">
+                <a
+                  href="messages.html"
+                  class="nav-link link-body-emphasis"
+                >
+                <i class="bi bi-chat me-2"></i> Messages
+                </a>
+              </li>
+              <li>
+                <a href="apropos.html" class="nav-link link-body-emphasis">
                   <i class="bi bi-info-circle me-2"></i> A propos
                 </a>
               </li>
               <li>
-                <a href="../contact.html" class="nav-link link-body-emphasis">
+                <a href="contact.html" class="nav-link link-body-emphasis">
                   <i class="bi bi-envelope me-2"></i> Contact
                 </a>
               </li>
@@ -224,7 +238,7 @@
               </form>
 
             </ul>
-            <a href="deconnexion.html" class="btn logout-button fw-bold">Déconnexion</a>
+            <a href="../connexion.html" class="btn logout-button fw-bold">Déconnexion</a>
           </div>
         </div>
       </div>
@@ -260,7 +274,7 @@
                    <td></td>
                </tr>
            </table>
-           <a href="../reservation.html" class="align-self-end">Voir la suite</a>
+           <a href="reservation.html" class="align-self-end">Voir la suite</a>
        </div>
        <div class="d-block d-lg-flex mt-3 g-4">
            <div class="promotions p-3 my-3">
@@ -297,7 +311,7 @@
                                                </svg>
                                                
                                            </div>
-                                           <a href="../detail.html" class="align-self-end btn btn-consulter mb-2">Consulter</a>
+                                           <a href="detail.html" class="align-self-end btn btn-consulter mb-2">Consulter</a>
                                        </div>
                                    </div>
                                </div>
@@ -331,7 +345,7 @@
                                            </svg>
                                          
                                        </div>
-                                       <a href="../detail.html" class="align-self-end btn btn-consulter mb-2">Consulter</a>
+                                       <a href="detail.html" class="align-self-end btn btn-consulter mb-2">Consulter</a>
                                  </div>
                                </div>
                              </div>
@@ -339,7 +353,7 @@
                        </div>
                        <div class="d-flex justify-content-center">
 
-                           <a href="../chambres.html">Voir plus d'offres</a>
+                           <a href="chambres.html">Voir plus d'offres</a>
                        </div>
                    </div>
                </div>

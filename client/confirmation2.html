@@ -79,11 +79,12 @@
                   </div>
                 </form>
                 <div class="d-flex flex-row align-self-end ms-3">
-                   <!-- Icone User -->
-                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                </svg>
+
+                    <!-- Icone User -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
                 </div>
               </div>
             </div>
@@ -123,37 +124,36 @@
                   <li>
                     <a
                       href="chambres.html"
-                      class="nav-link link-body-emphasis"
+                      class="nav-link active"
+                      aria-current="page"
                     >
                       <i class="bi bi-door-closed me-2"></i> Chambres
                     </a>
                   </li>
                   <li>
                     <a
-                      href="statistiques.html"
-                      class="nav-link link-body-emphasis"
-                    >
-                    <i class="bi bi-bar-chart me-2"></i>Statistiques
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="gestion_clients.html"
-                      class="nav-link link-body-emphasis"
-                    >
-                      <i class="bi bi-people me-2 me-2"></i> Gestion des clients
-                    </a>
-                  </li>
-                  <li>
-                    <a
                       href="messages.html"
-                      class="nav-link active"
-                      aria-current="page"
+                      class="nav-link link-body-emphasis"
                     >
                     <i class="bi bi-chat me-2"></i> Messages
                     </a>
                   </li>
-                  
+                  <li>
+                    <a
+                      href="apropos.html"
+                      class="nav-link link-body-emphasis"
+                    >
+                      <i class="bi bi-info-circle me-2"></i> A propos
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="contact.html"
+                      class="nav-link link-body-emphasis"
+                    >
+                      <i class="bi bi-envelope me-2"></i> Contact
+                    </a>
+                  </li>
                   <form class="search-input d-block d-md-none">
                     <div class="input-group flex-nowrap">
                       <input
@@ -189,8 +189,7 @@
             </div>
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
-                <a href="accueil.html"
-                  class="nav-link link-body-emphasis">
+                <a href="accueil.html" class="nav-link link-body-emphasis">
                   <i class="bi bi-house-door-fill me-2"></i> Accueil
                 </a>
               </li>
@@ -201,32 +200,28 @@
               </li>
               <li>
                 <a
-                  href="chambres.html" class="nav-link link-body-emphasis">
+                  href="chambres.html"
+                  class="nav-link active"
+                  aria-current="page">
                   <i class="bi bi-door-closed me-2"></i> Chambres
                 </a>
               </li>
               <li>
                 <a
-                  href="statistiques.html"
+                  href="messages.html"
                   class="nav-link link-body-emphasis"
-                >
-                <i class="bi bi-bar-chart me-2"></i>Statistiques
-                </a>
-              </li>
-              <li>
-                <a
-                  href="gestion_clients.html"
-                  class="nav-link link-body-emphasis"
-                >
-                  <i class="bi bi-people me-2 me-2"></i> Gestion des clients
-                </a>
-              </li>
-              <li>
-                <a
-                  href="messages.html" class="nav-link active"
-                  aria-current="page"
                 >
                 <i class="bi bi-chat me-2"></i> Messages
+                </a>
+              </li>
+              <li>
+                <a href="apropos.html" class="nav-link link-body-emphasis">
+                  <i class="bi bi-info-circle me-2"></i> A propos
+                </a>
+              </li>
+              <li>
+                <a href="contact.html" class="nav-link link-body-emphasis">
+                  <i class="bi bi-envelope me-2"></i> Contact
                 </a>
               </li>
               <form class="search-input d-block d-md-none">
@@ -241,20 +236,80 @@
                   ></span>
                 </div>
               </form>
+
             </ul>
             <a href="../connexion.html" class="btn logout-button fw-bold">Déconnexion</a>
           </div>
         </div>
       </div>
-      <!-- Présentation de l'hôtel -->
+      <!-- Page de confirmation de la réservation -->
       <div
-        class="flex flex-column autres"
+        class="flex flex-column autres px-2"
         style="margin-top: 80px; height: fit-content"
       >
         
-        <div class="container">
-            <h3 class="text-center">Vous n'avez pas de message</h3>
+      <div class="payment-section">
+        <!-- Step Indicator -->
+        <div class="step-indicator mb-4">
+          <div class="step-circle step-inactive me-3">1</div>
+          <div class="step-circle me-3">2</div>
+          <div class="step-circle step-inactive">3</div>
         </div>
+    
+        <!-- Payment Section -->
+        <h2 class="text-center fw-bold mb-2">Payment</h2>
+        <p class="text-center text-muted">Kindly follow the instructions below</p>
+    
+        <div class="row">
+          <!-- Payment Details -->
+          <div class="col-md-6">
+            <h5>Payment Details:</h5>
+            <p>Tax: <strong>10%</strong></p>
+            <p>Sub total: <strong>$480 USD</strong></p>
+            <p>Total: <strong>$580 USD</strong></p>
+    
+            <div class="d-flex align-items-center mb-4">
+              <img src="../images/logo/Wave-logo.pngg" alt="Logo Wave" class="payment-logo me-3">
+              <div>
+                <h6 class="mb-0">Wave</h6>
+                <p class="mb-0">+221 77 123 4567</p>
+              </div>
+            </div>
+    
+            <div class="d-flex align-items-center">
+              <img src="../images/logo/orange-money-logo.png" alt="Logo Orange Money" class="img-fluid rounded-2 payment-logo me-3"
+              style="width: 50px; height: 50px;"
+              >
+              <div>
+                <h6 class="mb-0">Orange Money</h6>
+                <p class="mb-0">+221 76 987 6543</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Form Section -->
+          <div class="col-md-6 form-section">
+            <form>
+              <div class="mb-3">
+                <label for="upload" class="form-label">Upload Payment Proof</label>
+                <input type="file" class="form-control" id="upload">
+              </div>
+              <div class="mb-3">
+                <label for="bank" class="form-label">Origin Bank</label>
+                <input type="text" class="form-control" id="bank" placeholder="Please type here...">
+              </div>
+              <div class="mb-3">
+                <label for="senderName" class="form-label">Sender's Name</label>
+                <input type="text" class="form-control" id="senderName" placeholder="Please type here...">
+              </div>
+              <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-cancel">Cancel</button>
+                <button type="submit" class="btn btn-primary px-4">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
           
       </div>
     </div>

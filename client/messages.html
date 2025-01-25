@@ -79,11 +79,12 @@
                   </div>
                 </form>
                 <div class="d-flex flex-row align-self-end ms-3">
-                   <!-- Icone User -->
-                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                </svg>
+
+                    <!-- Icone User -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
                 </div>
               </div>
             </div>
@@ -130,22 +131,6 @@
                   </li>
                   <li>
                     <a
-                      href="statistiques.html"
-                      class="nav-link link-body-emphasis"
-                    >
-                    <i class="bi bi-bar-chart me-2"></i>Statistiques
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="gestion_clients.html"
-                      class="nav-link link-body-emphasis"
-                    >
-                      <i class="bi bi-people me-2 me-2"></i> Gestion des clients
-                    </a>
-                  </li>
-                  <li>
-                    <a
                       href="messages.html"
                       class="nav-link active"
                       aria-current="page"
@@ -153,7 +138,22 @@
                     <i class="bi bi-chat me-2"></i> Messages
                     </a>
                   </li>
-                  
+                  <li>
+                    <a
+                      href="apropos.html"
+                      class="nav-link link-body-emphasis"
+                    >
+                      <i class="bi bi-info-circle me-2"></i> A propos
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="contact.html"
+                      class="nav-link link-body-emphasis"
+                    >
+                      <i class="bi bi-envelope me-2"></i> Contact
+                    </a>
+                  </li>
                   <form class="search-input d-block d-md-none">
                     <div class="input-group flex-nowrap">
                       <input
@@ -207,26 +207,21 @@
               </li>
               <li>
                 <a
-                  href="statistiques.html"
-                  class="nav-link link-body-emphasis"
-                >
-                <i class="bi bi-bar-chart me-2"></i>Statistiques
-                </a>
-              </li>
-              <li>
-                <a
-                  href="gestion_clients.html"
-                  class="nav-link link-body-emphasis"
-                >
-                  <i class="bi bi-people me-2 me-2"></i> Gestion des clients
-                </a>
-              </li>
-              <li>
-                <a
-                  href="messages.html" class="nav-link active"
+                  href="messages.html"
+                  class="nav-link active"
                   aria-current="page"
                 >
                 <i class="bi bi-chat me-2"></i> Messages
+                </a>
+              </li>
+              <li>
+                <a href="apropos.html" class="nav-link link-body-emphasis">
+                  <i class="bi bi-info-circle me-2"></i> A propos
+                </a>
+              </li>
+              <li>
+                <a href="contact.html" class="nav-link link-body-emphasis">
+                  <i class="bi bi-envelope me-2"></i> Contact
                 </a>
               </li>
               <form class="search-input d-block d-md-none">
@@ -241,20 +236,19 @@
                   ></span>
                 </div>
               </form>
+
             </ul>
             <a href="../connexion.html" class="btn logout-button fw-bold">Déconnexion</a>
           </div>
         </div>
       </div>
-      <!-- Présentation de l'hôtel -->
+      <!-- Page d'affichage des messages du client -->
       <div
-        class="flex flex-column autres"
+        class="flex flex-column autres px-2"
         style="margin-top: 80px; height: fit-content"
       >
         
-        <div class="container">
-            <h3 class="text-center">Vous n'avez pas de message</h3>
-        </div>
+      
           
       </div>
     </div>

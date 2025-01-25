@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SUNU HÔTEL</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <!-- Lien favicon -->
     <link
@@ -40,92 +39,305 @@
     ></script>
 
     <!-- Notre fichier JavaScript -->
-     <script src="/js/script.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <title>SUNU HÔTEL</title>
   </head>
   <body>
     <div class="home-content d-flex">
-      <div class="sideBar d-none d-md-block">
-        <div
-          id="sidebar"
-          class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary d-block"
-          style="width: 250px"
-        >
-          <a
-            href="accueil.html"
-            class="d-flex justify-content-center align-items-center mb-5"
+      <div class="sidebar-nav">
+        <nav class="navbar navbar-dark fixed-top p-0">
+          <div class="container flex-nowrap p-0" style="max-width: 100%">
+            <!-- Mobile Menu Toggle Button -->
+
+            <div class="row p-3 d-flex autres bg-body-tertiary pt-2">
+              <!-- Partie header -->
+              <!-- Barre de Rechercher -->
+              <div
+                class="header d-flex justify-content-between align-items-center p-0"
+                style="height: 40px; width: 100%"
+              >
+                <button
+                  class="navbar-toggler d-flex d-md-none"
+                  style="background-color: #cc9552"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar"
+                  aria-controls="offcanvasNavbar"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="search-input d-none d-md-block">
+                  <div class="input-group flex-nowrap">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Rechercher"
+                    />
+                    <span class="input-group-text"
+                      ><i class="bi bi-search"></i
+                    ></span>
+                  </div>
+                </form>
+                <div class="d-flex flex-row align-self-end ms-3">
+
+                    <!-- Icone User -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menus List -->
+
+            <div
+              class="bg-light offcanvas offcanvas-start shadow"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-center align-items-center mb-5"
+                >
+                  <img
+                    src="../images/logo-2.png"
+                    alt="Logo SUNU HOTEL"
+                    width="100"
+                  />
+                </div>
+                <ul class="nav nav-pills flex-column mb-auto">
+                  <li class="nav-item">
+                    <a href="accueil.html" class="nav-link link-body-emphasis">
+                      <i class="bi bi-house-door-fill me-2"></i> Accueil
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="reservation.html"
+                      class="nav-link active"
+                      aria-current="page"
+                    >
+                      <i class="bi bi-calendar-check me-2"></i> Réservations
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="chambres.html"
+                      class="nav-link link-body-emphasis"
+                    >
+                      <i class="bi bi-door-closed me-2"></i> Chambres
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="messages.html"
+                      class="nav-link link-body-emphasis"
+                    >
+                    <i class="bi bi-chat me-2"></i> Messages
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="apropos.html"
+                      class="nav-link link-body-emphasis"
+                    >
+                      <i class="bi bi-info-circle me-2"></i> A propos
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="contact.html"
+                      class="nav-link link-body-emphasis"
+                    >
+                      <i class="bi bi-envelope me-2"></i> Contact
+                    </a>
+                  </li>
+                  <form class="search-input d-block d-md-none">
+                    <div class="input-group flex-nowrap">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Rechercher"
+                      />
+                      <span class="input-group-text"
+                        ><i class="bi bi-search"></i
+                      ></span>
+                    </div>
+                  </form>
+                </ul>
+                <a href="../connexion.html" class="btn logout-button fw-bold">Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="sideBar d-none d-md-block">
+          <div
+            id="sidebar"
+            class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary d-block"
+            style="width: 250px"
           >
-            <img src="../images/logo-2.png" alt="Logo SUNU HOTEL" width="100" />
-          </a>
-          <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-              <a href="accueil.html" class="nav-link active" aria-current="page">
-                <i class="bi bi-house-door-fill me-2"></i> Accueil
-              </a>
-            </li>
-            <li>
-              <a href="reservation.html" class="nav-link link-body-emphasis">
-                <i class="bi bi-calendar-check me-2"></i> Réservations
-              </a>
-            </li>
-            <li>
-              <a href="../chambres.html" class="nav-link link-body-emphasis">
-                <i class="bi bi-door-closed me-2"></i> Chambres
-              </a>
-            </li>
-            <li>
-              <a href="../apropos.html" class="nav-link link-body-emphasis">
-                <i class="bi bi-info-circle me-2"></i> A propos
-              </a>
-            </li>
-            <li>
-              <a href="../contact.html" class="nav-link link-body-emphasis">
-                <i class="bi bi-envelope me-2"></i> Contact
-              </a>
-            </li>
-            <form class="search-input d-block d-md-none">
+            <div
+              class="d-flex justify-content-center align-items-center mb-5"
+            >
+              <img
+                src="../images/logo-2.png"
+                alt="Logo SUNU HOTEL"
+                width="100"
+              />
+            </div>
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="accueil.html" class="nav-link link-body-emphasis">
+                  <i class="bi bi-house-door-fill me-2"></i> Accueil
+                </a>
+              </li>
+              <li>
+                <a href="reservation.html"
+                  class="nav-link active"
+                  aria-current="page">
+                  <i class="bi bi-calendar-check me-2"></i> Réservations
+                </a>
+              </li>
+              <li>
+                <a
+                  href="chambres.html" class="nav-link link-body-emphasis">
+                  <i class="bi bi-door-closed me-2"></i> Chambres
+                </a>
+              </li>
+              <li>
+                <a
+                  href="messages.html"
+                  class="nav-link link-body-emphasis"
+                >
+                <i class="bi bi-chat me-2"></i> Messages
+                </a>
+              </li>
+              <li>
+                <a href="apropos.html" class="nav-link link-body-emphasis">
+                  <i class="bi bi-info-circle me-2"></i> A propos
+                </a>
+              </li>
+              <li>
+                <a href="contact.html" class="nav-link link-body-emphasis">
+                  <i class="bi bi-envelope me-2"></i> Contact
+                </a>
+              </li>
+              <form class="search-input d-block d-md-none">
                 <div class="input-group flex-nowrap">
                   <input
                     type="text"
                     class="form-control"
                     placeholder="Rechercher"
                   />
-                  <span class="input-group-text"><i class="bi bi-search"></i></span>
+                  <span class="input-group-text"
+                    ><i class="bi bi-search"></i
+                  ></span>
                 </div>
               </form>
-          </ul>
+
+            </ul>
+            <a href="../connexion.html" class="btn logout-button fw-bold">Déconnexion</a>
+          </div>
         </div>
       </div>
+      <!-- Page d'accueil client -->
+      <div
+        class="flex flex-column autres px-2"
+        style="margin-top: 80px; height: fit-content"
+      >
+      <h1 class="text-center mb-4">Vos Réservations</h1>
 
+          <!-- Onglets pour les catégories de réservations -->
+          <ul class="nav nav-tabs mb-4" id="reservationTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="enCours-tab" data-bs-toggle="tab" data-bs-target="#enCours" type="button" role="tab">En cours</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="annule-tab" data-bs-toggle="tab" data-bs-target="#annule" type="button" role="tab">Annulées</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="passe-tab" data-bs-toggle="tab" data-bs-target="#passe" type="button" role="tab">Passées</button>
+            </li>
+          </ul>
 
-      <!-- Section de présentation de l'hôtel
-      et affichage des chambres -->
-      <div class="row p-3 d-flex autres pt-2">
-            <!-- Partie header -->
-            <!-- Barre de Rechercher -->
-            <div
-            class="header d-flex justify-content-between align-items-center p-0"
-            style="height: 40px; width: 100%"
-            >
-                <!-- Icone menu Hamburger -->
-                <svg class="d-md-none menu-hamburger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                </svg>
-            <form class="search-input d-none d-md-block">
-                <div class="input-group flex-nowrap">
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Rechercher"
-                />
-                <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <!-- Contenu des onglets -->
+          <div class="tab-content" id="reservationTabsContent">
+            <!-- Réservations en cours -->
+            <div class="tab-pane fade show active" id="enCours" role="tabpanel">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Chambre Deluxe - 15/02/2025 au 20/02/2025</h5>
+                  <p class="card-text">Statut : <span class="badge bg-success">En cours</span></p>
+                  <button class="btn btn-primary btn-sm me-2 mb-2">Modifier</button>
+                  <button class="btn btn-danger btn-sm mb-2 me-2">Annuler</button>
+                  <a href="#" class="btn btn-secondary btn-sm mb-2">Télécharger la facture</a>
                 </div>
-            </form>
-            <div class="d-flex ms-3">
-                <button class="btn me-3 login-button fw-bold">Insciption</button>
-                <button class="btn login-button fw-bold">Connexion</button>
+              </div>
             </div>
+
+                <!-- Réservations annulées -->
+            <div class="tab-pane fade" id="annule" role="tabpanel">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Chambre Standard - 10/01/2025 au 15/01/2025</h5>
+                  <p class="card-text">Statut : <span class="badge bg-danger">Annulée</span></p>
+                  <a href="#" class="btn btn-secondary btn-sm">Télécharger la facture</a>
+                </div>
+              </div>
             </div>
-        </div>
+            
+
+                <!-- Réservations passées -->
+              <div class="tab-pane fade" id="passe" role="tabpanel">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Suite Royale - 01/12/2024 au 05/12/2024</h5>
+                      <p class="card-text">Statut : <span class="badge bg-secondary">Passée</span></p>
+                      <a href="#" class="btn btn-secondary btn-sm me-2 mb-2">Télécharger la facture</a>
+                      <button class="btn btn-outline-primary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#avisModal">Donner un avis</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Modal pour donner un avis -->
+            <div class="modal fade" id="avisModal" tabindex="-1" aria-labelledby="avisModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="avisModalLabel">Donner un avis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="avisForm">
+                      <div class="mb-3">
+                        <label for="avis" class="form-label">Votre avis</label>
+                        <textarea class="form-control" id="avis" rows="4" placeholder="Rédigez votre avis ici..."></textarea>
+                      </div>
+                      <div class="mb-3">
+                        <label for="rating" class="form-label">Note</label>
+                        <select class="form-select" id="rating">
+                          <option selected disabled>Choisir une note</option>
+                          <option value="1">1 - Très mauvais</option>
+                          <option value="2">2 - Mauvais</option>
+                          <option value="3">3 - Moyen</option>
+                          <option value="4">4 - Bon</option>
+                          <option value="5">5 - Excellent</option>
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          
+      </div>
     </div>
   </body>
 </html>

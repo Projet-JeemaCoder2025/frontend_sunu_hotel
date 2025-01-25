@@ -51,13 +51,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
       // Images
-      const images = document.getElementById("formFileMultiple");
-      if (!images.files.length) {
+    const images = document.getElementById("formFileMultiple");
+    if (!images.files.length) {
+      images.classList.add("is-invalid");
+      isValid = false;
+    } else {
+      // Validation des types de fichiers
+      const validTypes = ["image/png", "image/jpeg"];
+      const invalidFiles = Array.from(images.files).filter(
+        (file) => !validTypes.includes(file.type)
+      );
+
+      if (invalidFiles.length > 0) {
         images.classList.add("is-invalid");
         isValid = false;
       } else {
         images.classList.remove("is-invalid");
       }
+    }
   
       // Description
       const description = document.getElementById("description");
